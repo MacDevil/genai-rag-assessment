@@ -1,0 +1,155 @@
+[
+  {
+    "query": "How does the system handle peak load?",
+    "strategy_a": {
+      "query": "How does the system handle peak load?",
+      "rewritten_query": null,
+      "top_3": [
+        {
+          "chunk_id": 5,
+          "score": 0.7944375276565552,
+          "text": "Peak load protection is reinforced through asynchronous processing"
+        },
+        {
+          "chunk_id": 3,
+          "score": 1.0713796615600586,
+          "text": ". During high demand periods, new instances are launched in seconds, reducing latency spikes and"
+        },
+        {
+          "chunk_id": 0,
+          "score": 1.0998938083648682,
+          "text": "Our platform uses horizontal autoscaling to handle sudden increases in request volume"
+        }
+      ]
+    },
+    "strategy_b": {
+      "query": "How does the system handle peak load?",
+      "rewritten_query": "How does the system handle peak load?. Focus on: throughput burst autoscaling queue depth backpressure p95 latency.",
+      "expanded_queries": [
+        "How does the system handle peak load?",
+        "How does the system handle peak load?. Focus on: throughput burst autoscaling queue depth backpressure p95 latency.",
+        "autoscaling queue lag backpressure p95 latency traffic burst",
+        "rate limiting load shedding admission control tail latency"
+      ],
+      "top_3": [
+        {
+          "chunk_id": 5,
+          "score": 0.7944375276565552,
+          "text": "Peak load protection is reinforced through asynchronous processing"
+        },
+        {
+          "chunk_id": 19,
+          "score": 0.8385814428329468,
+          "text": ". Dashboards track p95 latency, error rates, queue lag, and saturation"
+        },
+        {
+          "chunk_id": 8,
+          "score": 0.9124929904937744,
+          "text": ". Backpressure rules slow ingestion when queue lag grows, protecting downstream databases from"
+        }
+      ]
+    }
+  },
+  {
+    "query": "What mechanisms prevent cascading failures during outages?",
+    "strategy_a": {
+      "query": "What mechanisms prevent cascading failures during outages?",
+      "rewritten_query": null,
+      "top_3": [
+        {
+          "chunk_id": 22,
+          "score": 0.8594430685043335,
+          "text": ". This allows safe retries when transient errors happen under load"
+        },
+        {
+          "chunk_id": 16,
+          "score": 0.8781583309173584,
+          "text": ". If a third-party API slows down, the circuit opens to avoid cascading failures"
+        },
+        {
+          "chunk_id": 17,
+          "score": 1.051642894744873,
+          "text": ". Requests may be served with stale but safe fallback data until upstream services recover."
+        }
+      ]
+    },
+    "strategy_b": {
+      "query": "What mechanisms prevent cascading failures during outages?",
+      "rewritten_query": "What mechanisms prevent cascading failures during outages?. Focus on: circuit breaker retry budget failover graceful degradation; circuit breaker retry budget failover graceful degradation.",
+      "expanded_queries": [
+        "What mechanisms prevent cascading failures during outages?",
+        "What mechanisms prevent cascading failures during outages?. Focus on: circuit breaker retry budget failover graceful degradation; circuit breaker retry budget failover graceful degradation.",
+        "circuit breaker timeout jitter retries fallback graceful degradation",
+        "bulkhead isolation failover retry storm prevention"
+      ],
+      "top_3": [
+        {
+          "chunk_id": 22,
+          "score": 0.8594430685043335,
+          "text": ". This allows safe retries when transient errors happen under load"
+        },
+        {
+          "chunk_id": 16,
+          "score": 0.8781583309173584,
+          "text": ". If a third-party API slows down, the circuit opens to avoid cascading failures"
+        },
+        {
+          "chunk_id": 15,
+          "score": 1.0199968814849854,
+          "text": "The system includes circuit breakers and retry budgets for external dependencies"
+        }
+      ]
+    }
+  },
+  {
+    "query": "How is data consistency preserved when retries happen?",
+    "strategy_a": {
+      "query": "How is data consistency preserved when retries happen?",
+      "rewritten_query": null,
+      "top_3": [
+        {
+          "chunk_id": 21,
+          "score": 0.9842881560325623,
+          "text": "For data consistency, writes use idempotency keys and transactional outbox patterns"
+        },
+        {
+          "chunk_id": 26,
+          "score": 1.0499205589294434,
+          "text": ". Recovery point objectives are maintained through continuous replication and periodic restore"
+        },
+        {
+          "chunk_id": 23,
+          "score": 1.1077775955200195,
+          "text": ". Event consumers apply deduplication checks so replayed events do not create duplicate records."
+        }
+      ]
+    },
+    "strategy_b": {
+      "query": "How is data consistency preserved when retries happen?",
+      "rewritten_query": "How is data consistency preserved when retries happen?. Focus on: idempotency transactional outbox deduplication replay safety; idempotency transactional outbox deduplication replay safety.",
+      "expanded_queries": [
+        "How is data consistency preserved when retries happen?",
+        "How is data consistency preserved when retries happen?. Focus on: idempotency transactional outbox deduplication replay safety; idempotency transactional outbox deduplication replay safety.",
+        "idempotency keys deduplication exactly-once semantics",
+        "transactional outbox replay-safe consumers processed event ids"
+      ],
+      "top_3": [
+        {
+          "chunk_id": 21,
+          "score": 0.6034458875656128,
+          "text": "For data consistency, writes use idempotency keys and transactional outbox patterns"
+        },
+        {
+          "chunk_id": 23,
+          "score": 0.8202048540115356,
+          "text": ". Event consumers apply deduplication checks so replayed events do not create duplicate records."
+        },
+        {
+          "chunk_id": 26,
+          "score": 0.9635233879089355,
+          "text": ". Recovery point objectives are maintained through continuous replication and periodic restore"
+        }
+      ]
+    }
+  }
+]
